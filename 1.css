@@ -1,0 +1,302 @@
+ @font-face {
+  font-family: 'Libertinus Mono';
+  src: url('fonts/LibertinusMono-Regular.ttf') format('ttf');
+  font-style: normal;
+  font-weight: normal;
+ }
+
+
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	font-family:"Libertinus Mono", monospace;
+  background-image:url("imagenes/fondo.jpg");
+	background-size:cover;
+  background-attachment: fixed ;/*la imagen de fondo permanece fija*/
+  background-position: center;
+
+}
+
+.contenedor{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.contenido{
+  padding: 30px;
+  text-align: center;
+}
+
+
+.img{
+	width:300px;
+	height:auto;
+	box-shadow: 2px 2px 4px #E5D0D8;
+}
+
+img{
+	width:450px;
+	height:auto;
+	box-shadow: 2px 2px 4px #E5D0D8;
+}
+
+video{
+	width:800px;
+	height:auto;
+	box-shadow: 2px 2px 4px #E5D0D8;
+}
+
+.enlace{
+	color:#77a72c;
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+h1 {
+  font-size:40px;
+	color:#C8475E;
+	text-shadow: 2px 2px 4px #E5D0D8;
+  text-align:center;
+}
+
+b {
+	color:#a14a5a;
+}
+
+h2{
+	color:#c26767;
+  font-size: 25 px;
+}
+
+p {
+  font-size:18px;
+  margin: 0 auto;
+  padding: 0 20px;
+  line-height:1.6;
+  max-width: 900px;
+
+}
+
+li{
+  font-size: 18px;
+  margin: 0 auto;
+  padding:0 20px;
+  line-height: 1.6;
+  max-width: 900px;
+  text-align: left;
+}
+
+ol{
+  font-size: 18px;
+  margin: 0 auto;
+  padding:0 20px;
+  line-height: 1.6;
+  max-width: 900px;
+  text-align: left;
+}
+
+/* Oculta el checkbox */
+.menu-toggle {
+  display: none;
+}
+
+/* Botón ☰ para abrir el menú */
+.menu-icon {
+  font-size: 28px;
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/*marco del menu*/
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: -300px;
+  height: 100vh;
+  width: 300px;
+  background-color: #FFF4F9;
+  padding-top: 30px;
+  box-shadow:  2px 2px 4px #E5D0D8;
+  z-index: 1000;
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Mostrar menú cuando el checkbox está activo */
+.menu-toggle:checked ~ .menu {
+  left: 0;
+}
+
+/* Botón para cerrar el menú */
+.cerrar-icono {
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #5A2A33;
+  cursor: pointer;
+}
+
+/* Oculta los submenús por defecto */
+.menu li ul {
+  display: none;
+  padding-left: 20px;
+}
+
+/* Muestra los submenús cuando se pasa el mouse por el li padre */
+.menu li:hover > ul {
+  display: block;
+}
+
+.menu li ul li a {
+  font-size: 16px;
+  background-color: #FFF4F9;
+  padding-left: 20px;
+  border-left: 2px solid #F9B3C2;
+}
+
+/* Estilo de lista del menú */
+
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  color: #5A2A33;
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  font-family: 'Libertinus Mono', monospace;
+  text-decoration: none; /*quita el subrayado predeterminado*/
+  transition: 0.3s;
+  text-align: left;
+}
+
+.menu a:hover {
+  color: #61A3C2;
+  background-color: #F9B3C2;
+  border-radius: 8px;
+}
+
+.menu strong{
+  display: block;
+  font-size:14px;
+  font-weight: bold;
+  color:#C8475E;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 12px 4px;
+  margin-top: 10px;
+  border-bottom: 1px solid #E5D0D8;
+  text-align: left;
+}
+
+section{
+  scroll-margin-top:30px;
+}
+
+/* formulario*/
+form {
+  padding: 50px 55px;
+  background-color: #ffffff85;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  border-radius: 72 px;
+  text-align: center;
+  width: 440px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+}
+
+/*describe los botones del formulario*/
+label{
+  color: #5A2A33;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+
+input, textarea {
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #ffeff6;
+  border: 2px solid #ffecf5;
+  color:#5A2A33;
+  outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+  color: #dfb9c8;
+}
+
+.form-txt{
+  margin-bottom: 30px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.form-txt a{
+  color:#e29cab;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn{
+  font-size: 18px;
+  color:#ffeff6;
+  border:0;
+  border-radius: 25px;
+  background-color: #F9B3C2;
+  box-shadow: 0 0 20px rgba(161, 99, 113, 0.5);
+  cursor: pointer;
+
+  
+}
+
+.btn:hover{
+  background-color: #94164079;
+
+}
+
+@media(max-width:991px){
+  body{
+    padding: 30 px;
+  }
+  form{
+    padding: 50px 30 px;
+    width: 100%;
+  }
+
+  input{
+    padding:15
+  }
+
+}
